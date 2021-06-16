@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h" />
+
+	<Extern href="vsshlids.h" />
+
+	<Commands package="guidIncrementPackage">
+		<Menus>
+			<Menu guid="guidIncrementPackageCmdSet" id="Menu" priority="0x700" type="Menu">
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
+				<Strings>
+					<ButtonText>String Manipulation</ButtonText>
+				</Strings>
+			</Menu>
+		</Menus>
+
+		<Groups>
+			<Group guid="guidIncrementPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+				<Parent guid="guidIncrementPackageCmdSet" id="Menu" />
+			</Group>
+		</Groups>
+
+		<Buttons>
+			<Button guid="guidIncrementPackageCmdSet" id="IncrementId" priority="0x0100" type="Button">
+				<Parent guid="guidIncrementPackageCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Increment</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIncrementPackageCmdSet" id="DecrementId" priority="0x0100" type="Button">
+				<Parent guid="guidIncrementPackageCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Decrement</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIncrementPackageCmdSet" id="IncrementDuplicatesId" priority="0x0100" type="Button">
+				<Parent guid="guidIncrementPackageCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Increment Duplicates</ButtonText>
+				</Strings>
+			</Button>
+
+			<Button guid="guidIncrementPackageCmdSet" id="DecrementDuplicatesId" priority="0x0100" type="Button">
+				<Parent guid="guidIncrementPackageCmdSet" id="MyMenuGroup" />
+				<Strings>
+					<ButtonText>Decrement Duplicates</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<GuidSymbol name="guidIncrementPackage" value="{5ec4d8e1-ab84-4c38-a55b-aa11fcf70a3d}" />
+
+		<GuidSymbol name="guidIncrementPackageCmdSet" value="{d76396e3-c7ac-4e9a-bfd5-41bee2650ae4}">
+			<IDSymbol name="MyMenuGroup" value="0x1020" />
+			<IDSymbol name="Menu" value="0x1030" />
+			<IDSymbol name="IncrementId" value="0x0100" />
+			<IDSymbol name="DecrementId" value="0x0200" />
+			<IDSymbol name="IncrementDuplicatesId" value="0x0300" />
+			<IDSymbol name="DecrementDuplicatesId" value="0x0400" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
