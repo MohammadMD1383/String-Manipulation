@@ -2,6 +2,9 @@
 
 > Currently this is a preview and is on experimental stage.
 
+### Download
+Download and install extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=MohammadMD.StringManipulation)
+
 ### Features
 * Increment numbers
 * Decrement numbers
